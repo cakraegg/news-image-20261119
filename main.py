@@ -98,7 +98,10 @@ def main():
         die("entry.png is larger than 1024 by 1024")
     out_dir = pathlib.Path(os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output")
     out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / "entry.png").write_bytes(blob)
+    target = out_dir / "entry.png"
+    target.write_bytes(blob)
+    if target.read_bytes() != blob:
+        die("the written entry.png does not match the validated picture")
 
 
 if __name__ == "__main__":
