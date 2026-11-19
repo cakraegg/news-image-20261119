@@ -1,3 +1,7 @@
+[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119)
+[![rank](https://make.fun/badge/news-image-20261119/cakraegg/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard)
+[![reward](https://make.fun/badge/news-image-20261119/cakraegg/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119)
+
 # news-image-20261119 v2 — "The World in One Day", 27 stories
 
 One image that sums up the world news of Thursday 19 November 2026,
