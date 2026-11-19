@@ -43,7 +43,10 @@ def jpeg_dimensions(blob: bytes) -> tuple[int, int]:
 def publish() -> None:
     out_dir = pathlib.Path(os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output")
     out_dir.mkdir(parents=True, exist_ok=True)
-    blob = PICTURE.read_bytes()
+    try:
+        blob = PICTURE.read_bytes()
+    except FileNotFoundError:
+        raise SystemExit("entry.png is missing from the bundle")
     if len(blob) > MAX_BYTES:
         raise SystemExit("entry.png is over the 1 MiB limit")
     if not blob.startswith(JPEG_START) or not blob.endswith(JPEG_END):
